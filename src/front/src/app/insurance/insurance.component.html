@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-lg-10 ">
+      <h3 class="text-center">insurance</h3>
+      <br/>
+      <form [formGroup]="form">
+      <span>
+        <p-radioButton class="col-md-2" name="groupname" value="Bike" label="Bike"
+                       #bi formControlName="insuranceType" (click)="typeChange(bi)"></p-radioButton>
+        <p-radioButton class="col-md-2" name="groupname" value="Jewelry" label="Jewelry"
+                       #je (click)="typeChange(je)" formControlName="insuranceType"></p-radioButton>
+        <p-radioButton class="col-sm-3" name="groupname" value="Electronics" label="Electronics"
+                       #el (click)="typeChange(el)" formControlName="insuranceType"></p-radioButton>
+        <p-radioButton class="col-sm-3" name="groupname" value="SportsEquipment" label="SportsEquipment"
+                       #se (click)="typeChange(se)" formControlName="insuranceType"></p-radioButton>
+
+      </span>
+        <br>
+        <br>
+        <div class="col-sm-2"><h4>Coverage </h4></div>
+        <div class="col-sm-pull-1"><h4></h4></div>
+        <div class="col-md-8 ">
+          <p-slider formControlName="coverage" [min]="min" [max]="max"></p-slider>
+
+        </div>
+
+        <h4>{{this.form.value.coverage}}</h4>
+
+        <div class="col-md-2"><h4>Risk</h4></div>
+        <div class="col-md-10"><h4>{{form.value.risk}}%</h4></div>
+        <br>
+        <br>
+        <div class="col-md-2"><h4>Price</h4></div>
+        <div class="col-md-4"><input class="form-control" type="number" formControlName="price"></div>
+        <div class="col-md-2">
+          <button class="btn btn-primary" [disabled]="!form.valid" (click)="save()">save</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+
+
+        <div class="col-md-1"></div>
+        <div class="col-md-9">
+          <p-dataTable [value]="gridDataSource" [rows]="10" [paginator]="true">
+
+            <p-column [field]="item.field" [header]="item.header" *ngFor="let item of gridColumns"></p-column>
+
+          </p-dataTable>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

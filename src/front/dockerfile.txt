@@ -1,0 +1,6 @@
+FROM frolvlad/alpine-oraclejdk8:slim
+VOLUME /tmp
+ADD gs-spring-docker-0.1.0.jar insurance.war 
+RUN sh -c 'touch /insurance.war'
+ENV JAVA_OPTS=""
+ENTRYPOINT [ "sh", "-c", "mvn clean install run" 

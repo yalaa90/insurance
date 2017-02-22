@@ -1,0 +1,30 @@
+package com.insurance.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.insurance.entites.InsuranceEntity;
+
+import junit.framework.Assert;
+
+@Repository
+public class InsuranceDAO  {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	protected Session session;
+
+	public Session getSession() {
+		return sessionFactory.getCurrentSession();
+	}
+
+	@Override
+	public void save(final InsuranceEntity entity) { // todo aop
+		Assert.notNull(entity);
+		getSession().save(entity);
+
+	}
+}

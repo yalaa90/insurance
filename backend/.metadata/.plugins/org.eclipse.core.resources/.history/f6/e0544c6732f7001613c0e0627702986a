@@ -1,0 +1,19 @@
+#POSTGRESQL MSSQL
+#databaseConfigurations.driverClassName:org.postgresql.Driver
+databaseConfigurations.database:MSSQL
+databaseConfigurations.driverClassName:com.microsoft.sqlserver.jdbc.SQLServerDriver
+#databaseConfigurations.url:jdbc:postgresql://192.168.1.44:5432/nerp-test
+databaseConfigurations.url:jdbc:sqlserver://localhost:1433;databaseName=hrms
+databaseConfigurations.username:sa
+#databaseConfigurations.username:postgres
+databaseConfigurations.password:sa123
+databaseConfigurations.minPoolSize:10
+databaseConfigurations.maxPoolSize:100
+databaseConfigurations.maxIdleTime:20
+#databaseConfigurations.dilect:org.hibernate.dialect.PostgreSQLDialect
+databaseConfigurations.dilect:org.hibernate.dialect.SQLServer2012Dialect
+databaseConfigurations.showSql:true
+databaseConfigurations.format:true
+
+
+ 

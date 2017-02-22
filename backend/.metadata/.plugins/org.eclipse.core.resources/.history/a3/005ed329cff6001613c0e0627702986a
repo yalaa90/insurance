@@ -1,0 +1,21 @@
+package com.insurance.controller;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.insurance.entites.InsuranceEntity;
+import com.insurance.response.SuccessResponse;
+
+@RestController
+@RequestMapping
+public class InsuranceController {
+
+	@RequestMapping(method==RequestMethod.POST)
+	public SuccessResponse save(@RequestBody InsuranceEntity entity) {
+			
+		
+		return new SuccessResponse(true);
+	}
+}

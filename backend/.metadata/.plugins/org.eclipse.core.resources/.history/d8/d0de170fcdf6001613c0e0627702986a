@@ -1,0 +1,14 @@
+package com.insurance.dao;
+
+public abstract class BaseDAO {
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	protected Session session;
+
+	protected abstract getEntityType();
+	protected Class<T> EntityClass;
+	public Session getSession() {
+		return sessionFactory.getCurrentSession();
+	}
+}

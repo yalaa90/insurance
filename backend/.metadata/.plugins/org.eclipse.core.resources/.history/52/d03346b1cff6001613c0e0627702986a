@@ -1,0 +1,6 @@
+package com.insurance.test;
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "classpath:/config/root-context.xml", "classpath:/config/servlet-context.xml"})
+public class InsuranceTest {
+
+}

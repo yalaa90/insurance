@@ -1,0 +1,10 @@
+com\insurance\entites\InsuranceEnum.class
+com\insurance\entites\InsuranceEntity.class
+com\insurance\response\BaseResponse.class
+com\insurance\controller\InsuranceController.class
+com\insurance\App.class
+com\insurance\service\InsuranceService.class
+com\insurance\dao\InsuranceDAO.class
+com\insurance\test\InsuranceTest.class
+com\insurance\response\SimpleCORSFilter.class
+com\insurance\response\SuccessResponse.class

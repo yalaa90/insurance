@@ -1,0 +1,18 @@
+package com.insurance.dao;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class InsuranceDAO extends BaseDAO {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	protected Session session;
+
+	protected Class<T> EntityClass= ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]);;;
+
+	public Session getSession() {
+		return sessionFactory.getCurrentSession();
+	}
+}

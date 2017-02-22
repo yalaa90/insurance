@@ -1,0 +1,14 @@
+package com.insurance.dao;
+
+public abstract class BaseDAO  <T extends BaseEntity, pk extends Serializable>{
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	protected Session session;
+
+	protected Class<T> EntityClass= ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]);;;
+
+	public Session getSession() {
+		return sessionFactory.getCurrentSession();
+	}
+}
